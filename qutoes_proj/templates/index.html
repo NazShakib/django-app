@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+
+<div class='container mt-3'>
+
+{% for q in object_list %}
+<br>
+<div class="card">
+  <div class="card-header">
+    {{ q.qutoes_category.title }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ q.author }}</h5>
+    <p class="card-text">{{ q.qutoes }}</p>
+  </div>
+</div>
+
+{% endfor %}
+
+<br>
+</div>
+
+
+
+
+{% endblock body %}
